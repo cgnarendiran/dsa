@@ -30,14 +30,17 @@ def explore_size_recursive(graph, src, visited):
 
 def explore_size(graph, src, visited):
     """Explore the size from a given node using dfs."""
+
+    if src in visited:
+        return 0
     stack = [src]
+    visited.add(src)
     size = 0
 
     while len(stack) > 0:
         print(stack, visited, size)
 
         current = stack.pop()
-        visited.add(current)
         size += 1
 
         for neighbor in graph[current]:
