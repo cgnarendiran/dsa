@@ -1,6 +1,6 @@
 import heapq
 
-def shortest_path(graph, src, dst):
+def shortest_path_dijkstra(graph, src, dst):
     visited = set()
     queue = [(0, src)]  # Priority queue, with distance as the first element
 
